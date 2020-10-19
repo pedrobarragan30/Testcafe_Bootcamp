@@ -33,3 +33,16 @@ test('Probar el envio del email correctamente', async t =>{
     await t
         .expect(page.text33.innerText).contains('sent','Prueba exitosa')
 });
+
+test('Probar el envio de un email incorrecto', async t =>{
+    await t
+        .click(page.link3)
+
+    await t
+        .typeText(page.input31, 'no@email@noemail.com')
+        .expect(page.input31.value).eql('no@email@noemail.com')
+        .click(page.button32)
+
+    await t
+        .expect(page.error34.innerText).eql("Internal Server Error")
+});
