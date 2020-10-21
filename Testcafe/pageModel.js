@@ -32,10 +32,10 @@ class Page
         this.link6 = Selector('a').withText('Add/Remove Elements');
         this.addBtn61 = Selector('#content > div > button');
         this.removeBtn62 = Selector('#elements > button');
-/*
-        #elements > button:nth-child(1)
-        #elements > button:nth-child(5)
-*/      
+        this.removeBtn63 = Selector('#elements > button:nth-child(2)')
+        this.removeBtn64 = Selector('#elements > button:nth-child(3)')   
+        this.removeBtn65 = Selector('#elements > button:nth-child(4)')   
+        this.removeBtn66 = Selector('#elements > button:nth-child(5)')   
     
     }
 }
