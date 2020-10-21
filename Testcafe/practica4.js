@@ -42,3 +42,22 @@ test('Probar checkboxes', async t => {
         .expect(page.baseCheckbox.nth(1).checked).ok()
         .expect(page.checkbox42.checked).ok()
 });
+
+test('Probar checkboxes y seleccionados', async t => {
+    await t
+        .click(page.link4)
+    
+    // Changing the current states
+    await t
+        .click(page.baseCheckbox.nth(0))
+
+    // Checking the Current states
+    await t
+        .expect(page.baseCheckbox.nth(0).checked).eql(true)
+        .expect(page.baseCheckbox.nth(1).checked).eql(true)
+
+    //The 'ok'assertion passes if the actual value is truthy
+    await t
+        .expect(page.baseCheckbox.nth(1).checked).ok()
+        .expect(page.checkbox42.checked).ok()
+});
