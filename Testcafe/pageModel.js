@@ -23,6 +23,20 @@ class Page
         //Checkbox Hijos
         this.checkbox41 = Selector('#checkboxes > input[type=checkbox]:nth-child(1)');
         this.checkbox42 = Selector('#checkboxes > input[type=checkbox]:nth-child(3)');
+
+        // Practica 5
+        this.link5 = Selector('a').withText('Inputs')
+        this.input51 = Selector('#content > div > div > div > input[type=number]');
+    
+        // Practica 6
+        this.link6 = Selector('a').withText('Add/Remove Elements');
+        this.addBtn61 = Selector('#content > div > button');
+        this.removeBtn62 = Selector('#elements > button');
+/*
+        #elements > button:nth-child(1)
+        #elements > button:nth-child(5)
+*/      
+    
     }
 }
 
