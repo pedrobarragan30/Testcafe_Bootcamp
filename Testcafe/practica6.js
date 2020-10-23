@@ -64,7 +64,7 @@ test('Agregar y quitar botones usando parent', async t => {
         .click(page.removeBtn62.nth(2))
         .click(page.removeBtn62.nth(0))
 
-        .expect(page.removeBtn64.visible).notOk()
-        .expect(page.removeBtn65.visible).notOk()
-        .expect(page.removeBtn66.visible).notOk()
+        .expect(page.removeBtn62.nth(3).visible).notOk()
+        .expect(page.removeBtn62.nth(4).visible).notOk()
+        .expect(page.removeBtn62.nth(5).visible).notOk()
 });
