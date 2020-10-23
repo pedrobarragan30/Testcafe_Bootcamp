@@ -60,6 +60,14 @@ class Page
         this.text705 = Selector('h1').withText('Thanks for submitting your form');
         this.text705 = Selector('body > div > div');
 
+        // Practica 8
+        this.link8 = Selector('a').withText('Form Authentication');
+        this.input81 = Selector('#username');
+        this.input82 = Selector('#password');
+        this.btn83 = Selector('#login > button > i');
+        this.error84 = Selector('#flash');
+        this.btn85 = Selector('#content > div > a > i'),
+
         // Practica 9
         this.link9 = Selector('a').withText('Key Presses');
         this.text91 = Selector('#result');

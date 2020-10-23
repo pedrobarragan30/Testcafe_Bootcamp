@@ -12,6 +12,10 @@ test('Probando primer formulario', async t => {
         .typeText(page.input73, "Software Engineer in Test")
         .expect(page.input73.value).eql("Software Engineer in Test")
 
+
+        .expect(page.rbtn74.checked).notOk()
+        .expect(page.rbtn75.checked).notOk()
+        .expect(page.rbtn76.checked).notOk()
         .click(page.rbtn74)
         .expect(page.rbtn74.checked).ok()
         .click(page.rbtn75)
@@ -19,6 +23,9 @@ test('Probando primer formulario', async t => {
         .click(page.rbtn76)
         .expect(page.rbtn76.checked).ok()
 
+        .expect(page.checkbox77.checked).notOk()
+        .expect(page.checkbox78.checked).notOk()
+        .expect(page.checkbox79.checked).notOk()
         .click(page.checkbox77)
         .expect(page.checkbox77.checked).ok()
         .click(page.checkbox78)
