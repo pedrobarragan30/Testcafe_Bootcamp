@@ -22,7 +22,7 @@ test('Escribir numeros', async t => {
         .expect(page.input51.value).eql("87979879")
 });
 
-test('Escribir numeros', async t => {
+test('Escribir 3 tipos de textos', async t => {
     await t
         .click(page.link5)
 
