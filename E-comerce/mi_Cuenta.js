@@ -1,10 +1,5 @@
 import page from './PageObjectModel';
-
-let rndNumber = Math.random().toString(36).substr(1,4);
-const email = 'dummy' + rndNumber + '@mailinator.com'
-const firstName = "Pedro"
-const lastName = "Barragan"
-const password = "88888"
+import { data } from './data';
 
 fixture('Pruebas de modulo mi cuenta')
     .page ('http://automationpractice.com');
@@ -14,24 +9,40 @@ test('Crear una cuenta', async t =>
 
     await t
         .click(page.signIn_link)
-    console.log("Correo: ", email)
+    console.log("Correo: ", data.email)
+    console.log("firstName: ", data.firstName)
+    console.log("lastName: ", data.lastName)
+    console.log("Password: ", data.password)
+    console.log("P Box: ", data.pbox)
     
     await t
-        .typeText(page.email_input, email)
+        .typeText(page.email_input, data.email)
         .click(page.createAccount_btn)
 
     await t
-        .expect(page.email_form.value).contains(email)
+        .expect(page.email_form.value).contains(data.email)
         .expect(page.email_form.hasAttribute('readonly')).notOk()
 
-        .typeText(page.firstName_input, firstName)
-        .typeText(page.lastName_input, lastName)
+        .typeText(page.firstName_input, data.firstName)
+        .typeText(page.lastName_input, data.lastName)
 
-        .expect(page.firstName_Address.value).contains(firstName)
-        .expect(page.lastName_Address.value).contains(lastName)
+        .expect(page.firstName_Address.value).contains(data.firstName)
+        .expect(page.lastName_Address.value).contains(data.lastName)
 
-        .typeText(page.password_input, password)
-        .typeText(page.address, "Somewhere underthe Rainbow 1234")
+        .typeText(page.password_input, data.password)
+        .typeText(page.address, data.pbox)
+
+        .typeText(page.city, data.city)
+        //.expect(page.city).contains(data.city)
+
+        //.click(page.state)
+        .typeText(page.zip_Code, data.zipCode)
+        //.click(page.country)
+        .typeText(page.mobile_Phone, data.mobilePhone)
+        .typeText(page.alias, data.alias)
+
+        .wait(6000)
+        //.click(page.register)
 });
 
 
