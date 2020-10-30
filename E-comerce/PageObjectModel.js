@@ -15,7 +15,8 @@ class Page
         this.lastName_Address = Selector('#lastname');
         this.address = Selector ('#address1');
         this.city = Selector ('#city');
-        this.state = Selector ('#id_state > option:nth-child(2)');//Alabama
+        this.state = Selector ('#id_state'); //Parent Selector
+        //this.state = Selector ('#id_state > option:nth-child(2)');//Alabama
         this.zip_Code = Selector ('#postcode');
         this.country = Selector ('#id_country > option:nth-child(2)');
         this.mobile_Phone = Selector ('#phone_mobile');
