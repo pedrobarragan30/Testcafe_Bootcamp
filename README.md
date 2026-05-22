@@ -23,7 +23,7 @@ Once the installation is completed, you can **Check Node version**; open Comand 
 Another process to perform is, to **Check NPM version**, once again open Command-Line and this time type:  
 `$ npm -v`  
 If you want to get sure **NodeJS** works, create on your desktop a file named "hello.js", open the file, and enter the next line  
-`console.log('NodeJS is installed!');"`  
+`console.log('NodeJS is installed!');`  
 To execute the code, open the command line, navigate to the desktop folder, then type  
 ` $ node hello.js`  
 This will start Node.js and execute the hello.js file. If you see a message reading `Node is installed!`, congratulations you are one step closer to see my project working.
@@ -39,7 +39,7 @@ You can also check the list of browsers that you have available, just type in co
 `testcafe -b`  
 Need help???  
 `testcafe -h`  
-If you want to get sure **Testcafe** works, create on your desktop a file named "test.js", open the file, and enter the next:  
+If you want to get sure **Testcafe** works, create on your desktop a file named "Browsertest.js", open the file, and enter the next:  
 ```javascript
 import { Selector } from 'testcafe';
 
@@ -50,8 +50,8 @@ test('My first test', async t => {
     // Test code
 });
 ```
-To execute the file "test.js" in Chrome, open the Command Line navigate to Desktop, and type `testcafe chrome new.js`  
-For Firefox you can type `testcafe chrome new.js`
+To execute the file "test.js" in Chrome, open the Command Line navigate to Desktop, and type `testcafe chrome Browsertest.js`  
+For Firefox you can type `testcafe chrome Browsertest.js`
  
 **4.- Installing [Git](https://git-scm.com/downloads)** based on your Operating System, as well as the version you'll like to have. Follow the instructions displayed by the installer until the installation is successfully completed.
 Once the installation is completed, locate on your desktop a Direct Access called Git Bash and double click on it to launch, navigate to a folder where you'd like to download my repo, create a folder caller repo and..... wait!!!, we forgot to configure Git, we'll need your user name and email, (if you do not have a GitHub account, go get one and then come back)... ready. open Git Bash again and type `$ git config --global user.name "YOUR_GIT_USERNAME"` press enter, then `$ git config --global user.email "EMAIL_IN_GIT"`, press enter.  
