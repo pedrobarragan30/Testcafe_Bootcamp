@@ -24,6 +24,25 @@ test('Click check boxes and then verify their state', async t => {
     }
 });
 
+/* THE SLIDER IS NOT MOVING TO THE EXACT POSITION
+test('Move the slider', async t => {
+        await t
+        .click(page.triedTestCafeCheckbox)
+        .expect(page.triedTestCafeCheckbox.checked).ok()
+        .drag(page.slider.handle, 360, 0, { offsetX: 10, offsetY: 50 })
+        .expect(page.slider.tick.innerText).eql('50') //UNABLE TO MOVE THE SLIDER TO THE EXACT POSITION, I TRIED WITH DIFFERENT OFFSETS AND IT DOESN'T WORK, I THINK IT'S A BUG
+        .wait(5000);
+});
+*/
+/* THE SELECT IS NOT EXPNANDING
+test('Testing the select box', async t => {
+    await t
+    .click(page.interfaceSelectOption.withText('Both'))
+    .expect(page.interfaceSelect.value).eql('Both')
+    .wait(5000);
+});
+*/
+
 test('Submit a developer name and check the header', async t => {
     const header = Selector('#article-header');
 
